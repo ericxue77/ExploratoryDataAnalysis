@@ -1,3 +1,4 @@
+##Create the file device
 png(file = "plot3.png")
 
 ##Read the file
@@ -24,8 +25,7 @@ lines(finalTime,as.numeric(levels(df$Sub_metering_3))[df$Sub_metering_3], col="b
 legend("topright", col = c("black","red","blue"), legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), lty = c(1,1,1))
 > 
 
-##copy the picture
-##dev.copy(png, file = "plot3.png")
+##close the device
 dev.off()
 
 

@@ -1,3 +1,5 @@
+##Create the file device
+png(file = "plot4.png")
 
 ##Read the file
 hpc_data<-read.table("household_power_consumption.txt", sep=";", header=T)
@@ -29,7 +31,7 @@ df$Sub_metering_3<-as.factor(df$Sub_metering_3)
 lines(finalTime,as.numeric(levels(df$Sub_metering_3))[df$Sub_metering_3], col="blue")
 
 ##Add legend
-legend("topright", col = c("black","red","blue"), legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), lty = c(1,1,1), pt.cex=1, cex=0.5)
+legend("topright", col = c("black","red","blue"), legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), lty = c(1,1,1))
 
 
 ##Draw the plot 4
@@ -37,8 +39,7 @@ plot(finalTime,as.numeric(levels(df$Global_reactive_power))[df$Global_reactive_p
 
 
 
-##copy the picture
-dev.copy(png, file = "plot4.png")
+##close the device
 dev.off()
 
 
